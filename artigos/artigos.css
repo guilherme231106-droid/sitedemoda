@@ -1,0 +1,230 @@
+/* =============================================
+   CSS EXCLUSIVO DA PÁGINA DE ARTIGO
+   ============================================= */
+ 
+/* HERO DA IMAGEM PRINCIPAL */
+.artigo-hero {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+}
+ 
+.artigo-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: brightness(0.55);
+}
+ 
+/* TEXTO SOBRE A IMAGEM HERO */
+.artigo-hero-overlay {
+    position: absolute;
+    bottom: 3rem;
+    left: 8vw;
+    color: #f5f0e8;
+}
+ 
+.artigo-hero-overlay .categoria {
+    position: static; /* sobrescreve o position:absolute do styles2.css */
+    display: inline-block;
+    background-color: #b5874b;
+    color: #fff;
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1rem;
+}
+ 
+.artigo-hero-overlay h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 5vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 1rem;
+}
+ 
+.artigo-hero-overlay h1 em {
+    font-style: italic;
+    color: #b5874b;
+}
+ 
+.artigo-meta {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245, 240, 232, 0.7);
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+}
+ 
+.separador {
+    color: #b5874b;
+}
+ 
+/* WRAPPER (artigo + sidebar lado a lado) */
+.artigo-wrapper {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+ 
+/* CORPO DO ARTIGO */
+.artigo-corpo {
+    background-color: #ffffff;
+    padding: 3rem;
+    border: 1px solid #e0d8cc;
+}
+ 
+.artigo-intro {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1c1814;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0d8cc;
+}
+ 
+.artigo-corpo h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin: 2.5rem 0 1rem;
+    color: #1c1814;
+}
+ 
+.artigo-corpo p {
+    font-size: 0.92rem;
+    color: #555;
+    margin-bottom: 1.2rem;
+    line-height: 1.85;
+}
+ 
+/* IMAGEM NO MEIO DO ARTIGO */
+.artigo-imagem-meio {
+    margin: 2rem 0;
+}
+ 
+.artigo-imagem-meio img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    display: block;
+}
+ 
+.legenda {
+    font-size: 0.72rem !important;
+    color: #9a9187 !important;
+    text-align: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #e0d8cc;
+    font-style: italic;
+    margin-bottom: 0 !important;
+}
+ 
+/* CITAÇÃO */
+blockquote {
+    border-left: 3px solid #b5874b;
+    margin: 2.5rem 0;
+    padding: 1rem 2rem;
+    background-color: #f5f0e8;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #1c1814;
+}
+ 
+/* LISTA */
+.artigo-lista {
+    margin: 1rem 0 1.5rem 1.5rem;
+}
+ 
+.artigo-lista li {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 0.8rem;
+}
+ 
+.artigo-lista li strong {
+    color: #1c1814;
+    font-weight: 500;
+}
+ 
+/* TAGS */
+.artigo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid #e0d8cc;
+}
+ 
+.artigo-tags span {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7a7168;
+    border: 1px solid #e0d8cc;
+    padding: 0.35rem 0.9rem;
+    transition: all 0.25s;
+    cursor: default;
+}
+ 
+.artigo-tags span:hover {
+    background-color: #b5874b;
+    border-color: #b5874b;
+    color: #fff;
+}
+ 
+/* BOTÃO VOLTAR */
+.voltar-wrapper {
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+ 
+.btn-voltar {
+    text-decoration: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #7a7168;
+    border-bottom: 1px solid #e0d8cc;
+    padding-bottom: 2px;
+    transition: color 0.25s, border-color 0.25s;
+}
+ 
+.btn-voltar:hover {
+    color: #b5874b;
+    border-color: #b5874b;
+}
+ 
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .artigo-hero {
+        height: 360px;
+    }
+ 
+    .artigo-wrapper {
+        grid-template-columns: 1fr;
+    }
+ 
+    .artigo-corpo {
+        padding: 2rem 1.5rem;
+    }
+ 
+    .artigo-hero-overlay {
+        left: 5vw;
+        bottom: 2rem;
+    }
+}
